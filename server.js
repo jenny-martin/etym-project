@@ -44,7 +44,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 //mount all routes with appropriate base paths
-app.use('/index', indexRouter);
+app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
