@@ -1,11 +1,11 @@
 
 var express = require('express');
 var router = express.Router();
-var wordsCtrl = require('../controllers/words')
 
 /* GET users */
-router.get('/', wordsCtrl.index);
-
+router.get('/', function(req, res, next) {
+    res.redirect('./index');
+});
 
 
 module.exports = router;

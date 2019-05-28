@@ -1,11 +1,10 @@
-var express = require('express');
-var router = express.Router();
+var router = require('express').Router();
 var passport = require('passport');
-var User = require('../models/user');
+
 
 /* GET home page. */
-router.get('/', function(req, res) {
-  res.render('./index');
+router.get('/', function(req, res, next) {
+  res.render('index', {title: 'ETYM', user: req.user });
 });
 
 //Google OAuth login route
