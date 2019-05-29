@@ -22,25 +22,57 @@
                         <a href="/logout"><i class="material-icons left">trending_flat</i>Log Out</a>
                     </li>
                 </ul>
+                <ul class="left">
+                        <li>
+                            <a href="/words/show">Your List</a>
+                        </li>
+                    </ul>
             </div>
         </nav>
     </div>
     <h1><%= title %></h1>
-    <table id="list">
-        <thead>
-            <tr>
-                <th>All Your Learned Words</th>
-            </tr>
-        </thead>
-        <tbody>
-            <% words.forEach(function(w) { %>
-            <tr>
-                <td><%= w.words %></td>
-                <td><a href="/words/<%= w._id %>">Add a New Word to Your List</a></td>
-            </tr>
-            <% }); %>
-        </tbody>
-    </table>
+
+    <h5>*Random Word from array*:</h5>
+
+    <form id="index-form" action="/words/show" method="GET">
+        <input type="text"><label>What does this word mean to you?</label>
+        <p>
+            <label>
+                <input class="with-gap" type="radio" name="posOrNegAssoc" checked>
+                <span>Positive</span>
+            </label>
+        </p>
+        <p>
+            <label>
+                <input class="with-gap" type="radio" name="posOrNegAssoc">
+                <span>Negative</span>
+            </label>
+        </p>
+
+        <div>
+            <label>What month of the year is it?</label>
+            <select name="month">
+                <option value="January">January</option>
+                <option value="February">February</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+            </select>
+        </div>
+        
+        <input type="submit" value="Submit">
+        
+    </form>
+
+
+    <p>Click 'submit' to see the word's etymology and save it to your word list.</p>
 </body>
 
 </html>

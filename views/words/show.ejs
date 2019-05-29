@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ETYM</title>
+    <!-- Google Icon Fonts used by Materialize -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Materialize CSS Framework -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <!-- JavaScript for Materialize -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+
+<body>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <ul class="right">
+                    <li>
+                        <a href="/logout"><i class="material-icons left">trending_flat</i>Log Out</a>
+                    </li>
+                </ul>
+                <ul class="left">
+                    <li>
+                        <a href="/words">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <h1><%= title %></h1>
+    <section id="list" action="/words/new" method="GET">
+        <ul></ul>
+        <li></li>
+        </ul>
+        <input type="submit" value="Click here to add a new word to your list">
+</body>
+
+</html>

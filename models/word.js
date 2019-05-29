@@ -3,14 +3,14 @@ var mongoose = require('mongoose');
 var monthSchema = new mongoose.Schema({
     month: {
         type: String,
-        enum: ['Jan', 'Feb', 'Mar']
+        enum: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
     }
 })
 
 var wordSchema = new mongoose.Schema({
-    word: {
+    words: {
         type: String,
-        enum: ['Word1', 'Word2', 'Word3']
+        enum: ['government', 'career', 'degree', 'avocado', 'mortgage', 'university', 'cache', 'robot', 'yule', 'careful']
     },
     origin: {
         type: String,
@@ -23,5 +23,7 @@ var wordSchema = new mongoose.Schema({
     },
     month: [monthSchema]
 });
+
+
 
 module.exports = mongoose.model('Word', wordSchema);
