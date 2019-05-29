@@ -9,3 +9,15 @@ a {
 .brand-logo {
   margin-left: 15px;
 }
+
+#list a {
+  border-radius: 4px;
+  background-color: #B8C0C2;
+  padding: 4px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+#list a:hover {
+  background-color: white;
+}

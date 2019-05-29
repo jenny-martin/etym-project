@@ -8,7 +8,7 @@ var monthSchema = new mongoose.Schema({
 })
 
 var wordSchema = new mongoose.Schema({
-    todaysWord: {
+    word: {
         type: String,
         enum: ['Word1', 'Word2', 'Word3']
     },

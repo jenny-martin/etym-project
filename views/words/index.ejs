@@ -36,11 +36,11 @@
             <% words.forEach(function(w) { %>
             <tr>
                 <td><%= w.words %></td>
+                <td><a href="/words/<%= w._id %>">Add a New Word to Your List</a></td>
             </tr>
             <% }); %>
         </tbody>
     </table>
-
 </body>
 
 </html>

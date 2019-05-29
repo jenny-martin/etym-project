@@ -2,8 +2,11 @@ var User = require('../models/user');
 
 
 module.exports = {
-    index
+    index,
+
 };
+
+
 
 function index(req, res, next) {
   console.log(req.query)
