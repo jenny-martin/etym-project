@@ -16,12 +16,9 @@ function show(req, res) {
 
 function create(req, res) {
   Word.findById(req.params.id, function (err, word) {
-    
-    word.save(function (err) {
       res.redirect(`/words/show`);
       console.log(word);
     });
-  });
 }
 
 

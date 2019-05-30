@@ -5,7 +5,7 @@ module.exports = {
 };
 
 function create (req, res) {
-    Word.findById(req.params.id, function(err, flwordight) {
+    Word.findById(req.params.id, function(err, word) {
         word.months.push(req.body);
         word.save(function(err) {
             res.redirect(`/words/show`);
