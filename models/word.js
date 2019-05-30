@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
 var monthSchema = new mongoose.Schema({
-    month: {
+    monthOfYear: {
         type: String,
         enum: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
     }
@@ -21,7 +21,7 @@ var wordSchema = new mongoose.Schema({
     posOrNegAssoc: {
         type: Boolean,
     },
-    month: [monthSchema]
+    months: [monthSchema]
 });
 
 

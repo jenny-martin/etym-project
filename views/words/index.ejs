@@ -32,10 +32,12 @@
     </div>
     <h1><%= title %></h1>
 
-    <h5>*Random Word from array*:</h5>
+    <% words.forEach(function(w) { %>
+        <h6><%= w.words %></h6>
+    <% }); %>
 
-    <form id="index-form" action="/words/show" method="GET">
-        <input type="text"><label>What does this word mean to you?</label>
+    <form id="index-form" action="/words/show" method="POST">
+        <input type="text" name="userMeaning"><label>What does this word mean to you?</label>
         <p>
             <label>
                 <input class="with-gap" type="radio" name="posOrNegAssoc" checked>
@@ -73,6 +75,12 @@
 
 
     <p>Click 'submit' to see the word's etymology and save it to your word list.</p>
-</body>
-
-</html>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script>
+     $(document).ready(function(){
+       $('select').formSelect();
+     });
+    </script>
+     </body>
+    </html>
