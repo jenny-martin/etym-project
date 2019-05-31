@@ -8,7 +8,7 @@ var monthSchema = new mongoose.Schema({
 })
 
 var wordSchema = new mongoose.Schema({
-    words: {
+    word: {
         type: String,
         enum: ['government', 'career', 'degree', 'avocado', 'mortgage', 'university', 'cache', 'robot', 'yule', 'careful']
     },

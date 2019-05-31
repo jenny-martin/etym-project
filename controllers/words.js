@@ -8,18 +8,21 @@ module.exports = {
 }
 
 function show(req, res) {
-  Word.find({}, function(err, words) {
+  Word.find({}, function (err, words) {
     res.render('words/show', { title: 'Your List of Words', words });
   });
 }
-  
+
 
 function create(req, res) {
-  Word.findById(req.params.id, function (err, word) {
-      res.redirect(`/words/show`);
-      console.log(word);
-    });
-}
+  var word = new Word(req.body);
+  word.save();
+  req.body.posOrNegAssoc = !!req.body.posOrNegAssoc;
+  req.body.months = req.body.months.replace();
+  
+  console.log(word);
+  res.redirect('/words/show');
+};
 
 
 function newWord(req, res) {

@@ -31,10 +31,14 @@
         </nav>
     </div>
     <h1><%= title %></h1>
-    <section id="list" action="/words/new" method="GET">
+    <section id="list" action="/words/show" method="GET">
         <ul>
-        <li><%= words %></li>
+            <% words.forEach(function(w) { %>
+        <li><%= w.userMeaning %></li>
+        <li><%= w.word %></li>
+        <li><%= w.word %></li>
         </ul>
+    <% }); %>
     </section>
         <input type="submit" value="Click here to add a new word to your list">
         

@@ -28,20 +28,26 @@
                     </li>
                 </ul>
                 <ul class="left">
-                        <li>
-                            <a href="/words/show">Your List</a>
-                        </li>
-                    </ul>
+                    <li>
+                        <a href="/words/show">Your List</a>
+                    </li>
+                </ul>
             </div>
         </nav>
     </div>
     <h1><%= title %></h1>
-    <form id="new-form" action="/words/show" method="POST">
+    <form id="new-form" action="/words/show" method="PUT">
         <label>Add a New Word to Your List:</label>
         <input type="text" name="word">
         <input type="submit" value="Add Word">
     </form>
-
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('select').formSelect();
+        });
+    </script>
 </body>
 
 </html>
